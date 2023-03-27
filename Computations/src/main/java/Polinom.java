@@ -4,34 +4,13 @@ public class Polinom {
     public void adaugare(int coeficient, int exponent){
         polinom.put(exponent, coeficient);
     }
-    public void afisare() {
-
-            StringBuilder poli = new StringBuilder();
-            for(Map.Entry<Integer,Integer> afisare : this.polinom.entrySet()){
-                int coeficient = afisare.getKey();
-                int exponent = afisare.getValue();
-
-                if( exponent == 0 ){
-                    poli.append(coeficient);
-                }
-                else if( exponent == 1 ){
-                    poli.append(coeficient).append("x");
-                }
-                else{
-                    poli.append(coeficient).append("x^").append(exponent);
-                }
-                poli.append(" + ");
-            }
-            poli.setLength(poli.length() - 3);
-            System.out.println(poli.toString());
-    }
     public String toString() {
         StringBuilder sb = new StringBuilder();
         boolean firstTerm = true;
         for(Map.Entry<Integer, Integer> entry: this.polinom.entrySet()){
             int exponent = entry.getKey();
             int coeficient = entry.getValue();
-            if (firstTerm) {
+            if (firstTerm == true) {
                 firstTerm = false;
                 if (coeficient < 0) {
                     sb.append("-");
