@@ -35,8 +35,8 @@ public class GUI extends JFrame{
                 String p1 = txtP1.getText();
                 String p2 = txtP2.getText();
 
-                Map<Integer, Integer> poli1 = Polinom.PolynomialParser(p1);
-                Map<Integer, Integer> poli2 = Polinom.PolynomialParser(p2);
+                Map<Integer, Integer> poli1 = Polinom.polynomialParser(p1);
+                Map<Integer, Integer> poli2 = Polinom.polynomialParser(p2);
 
                 Polinom polinom1 = new Polinom();
                 Polinom polinom2 = new Polinom();
@@ -64,8 +64,8 @@ public class GUI extends JFrame{
                 String p1 = txtP1.getText();
                 String p2 = txtP2.getText();
 
-                Map<Integer, Integer> poli1 = Polinom.PolynomialParser(p1);
-                Map<Integer, Integer> poli2 = Polinom.PolynomialParser(p2);
+                Map<Integer, Integer> poli1 = Polinom.polynomialParser(p1);
+                Map<Integer, Integer> poli2 = Polinom.polynomialParser(p2);
 
                 Polinom polinom1 = new Polinom();
                 Polinom polinom2 = new Polinom();
@@ -93,8 +93,8 @@ public class GUI extends JFrame{
                 String p1 = txtP1.getText();
                 String p2 = txtP2.getText();
 
-                Map<Integer, Integer> poli1 = Polinom.PolynomialParser(p1);
-                Map<Integer, Integer> poli2 = Polinom.PolynomialParser(p2);
+                Map<Integer, Integer> poli1 = Polinom.polynomialParser(p1);
+                Map<Integer, Integer> poli2 = Polinom.polynomialParser(p2);
 
                 Polinom polinom1 = new Polinom();
                 Polinom polinom2 = new Polinom();
@@ -122,8 +122,8 @@ public class GUI extends JFrame{
                 String p1 = txtP1.getText();
                 String p2 = txtP2.getText();
 
-                Map<Integer, Integer> poli1 = Polinom.PolynomialParser(p1);
-                Map<Integer, Integer> poli2 = Polinom.PolynomialParser(p2);
+                Map<Integer, Integer> poli1 = Polinom.polynomialParser(p1);
+                Map<Integer, Integer> poli2 = Polinom.polynomialParser(p2);
 
                 Polinom polinom1 = new Polinom();
                 Polinom polinom2 = new Polinom();
@@ -154,8 +154,8 @@ public class GUI extends JFrame{
                 String p1 = txtP1.getText();
                 String p2 = txtP2.getText();
 
-                Map<Integer, Integer> poli1 = Polinom.PolynomialParser(p1);
-                Map<Integer, Integer> poli2 = Polinom.PolynomialParser(p2);
+                Map<Integer, Integer> poli1 = Polinom.polynomialParser(p1);
+                Map<Integer, Integer> poli2 = Polinom.polynomialParser(p2);
 
                 Polinom polinom1 = new Polinom();
                 Polinom polinom2 = new Polinom();
@@ -183,8 +183,8 @@ public class GUI extends JFrame{
                 String p1 = txtP1.getText();
                 String p2 = txtP2.getText();
 
-                Map<Integer, Integer> poli1 = Polinom.PolynomialParser(p1);
-                Map<Integer, Integer> poli2 = Polinom.PolynomialParser(p2);
+                Map<Integer, Integer> poli1 = Polinom.polynomialParser(p1);
+                Map<Integer, Integer> poli2 = Polinom.polynomialParser(p2);
 
                 Polinom polinom1 = new Polinom();
                 Polinom polinom2 = new Polinom();

@@ -35,7 +35,7 @@ public class Polinom {
         }
         return sb.toString();
     }
-    public static Map<Integer,Integer> PolynomialParser(String polynomial) {
+    public static Map<Integer,Integer> polynomialParser(String polynomial) {
 
             Map<Integer, Integer> coefficients = new HashMap<>();
             String[] terms = polynomial.split("\\s*\\+\\s*"); // split la "+" cu spatiu inainte si dupa
