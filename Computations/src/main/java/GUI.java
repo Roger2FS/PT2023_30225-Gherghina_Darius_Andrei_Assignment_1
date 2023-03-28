@@ -26,6 +26,8 @@ public class GUI extends JFrame{
     private JLabel rezultat2;
     private JTextField rez1;
     private JTextField rez2;
+    private JTextField restTextField;
+    private JLabel restImp;
 
     public GUI() {
         okAdunare.addActionListener(new ActionListener() {
@@ -141,6 +143,9 @@ public class GUI extends JFrame{
                 Operatii polioname = new Operatii(polinom1,polinom2);
                 Polinom rezultat = polioname.impartire();
 
+                Polinom restRezultat = polioname.restImpartire() ;
+
+                restTextField.setText(restRezultat.toString());
                 rezultatField.setText(rezultat.toString());
             }
         });

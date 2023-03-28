@@ -97,6 +97,49 @@ public class Operatii {
         }
         return q ;
     }
+    public Polinom restImpartire(){
+
+        Polinom q = new Polinom();
+        Polinom r = new Polinom();
+        Polinom t = new Polinom();
+
+        for(Map.Entry<Integer, Integer> entry : this.p1.polinom.entrySet()) {
+            r.adaugare(entry.getValue(), entry.getKey());
+        }
+
+        int gradP2 = this.p2.polinom.keySet().iterator().next();
+        int gradR = r.polinom.keySet().iterator().next();
+
+        while(!r.polinom.isEmpty() && gradR >= gradP2) {
+            int coeficient1 = this.p2.polinom.values().iterator().next();
+            int coeficient2 = r.polinom.values().iterator().next();
+            int exponent1 = this.p2.polinom.keySet().iterator().next();
+            int exponent2 = r.polinom.keySet().iterator().next();
+            int coeficient = coeficient2 / coeficient1;
+            int exponent = exponent2 - exponent1;
+
+            q.adaugare(coeficient, exponent);
+            Polinom produs = new Polinom();
+            for (Map.Entry<Integer, Integer> entry : this.p2.polinom.entrySet()) {
+                int coefP2 = entry.getValue();
+                int expP2 = entry.getKey();
+                int coefPrim = coeficient * coefP2;
+                int expPrim = exponent + expP2;
+                produs.adaugare(coefPrim, expPrim);
+            }
+
+            Operatii operatii = new Operatii(r, produs);
+            r = operatii.scadere();
+
+            r.polinom.entrySet().removeIf(entry -> entry.getValue() == 0);
+
+            int gradP2Prim = this.p2.polinom.keySet().iterator().next();
+            int gradRPrim = r.polinom.keySet().iterator().next();
+            gradP2 = gradP2Prim;
+            gradR = gradRPrim ;
+        }
+        return r ;
+    }
     public static String derivare(Polinom p1){
 
         Polinom p2 = new Polinom() ;
@@ -124,7 +167,6 @@ public class Operatii {
         }
 
         poli2.setLength(poli2.length() - 3);
-        //System.out.println(poli2.toString());
 
         return poli2.toString() ;
     }
